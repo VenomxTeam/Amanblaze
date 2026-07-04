@@ -4,13 +4,13 @@
   "lastUpdated": "2026-07-04",
   "apps": [
     {
-      "name": "Sample App One",
-      "packageName": "com.amanblaze.sampleone",
+      "name": "All Video Downloader & Player",
+      "packageName": "com.dartdl.app",
       "category": "Tools",
-      "shortDescription": "Replace this with your real app description.",
+      "shortDescription": "The Ultimate Fast Video & MP3 Downloader.",
       "icon": "",
-      "installUrl": "https://play.google.com/store/apps/details?id=com.amanblaze.sampleone",
-      "version": "1.0.0"
+      "installUrl": "https://play.google.com/store/apps/details?id=com.dartdl.app",
+      "version": "2.0.3"
     }
   ]
 }
