@@ -1,0 +1,17 @@
+# Amanblaze
+
+> Amanblaze is a software development community that designs, builds, and publishes its own Android applications on Google Play.
+
+## About
+Amanblaze is not a marketplace or app store — every app listed on this site is developed in-house by the Amanblaze team and published under our official Google Play developer account.
+
+## Pages
+- [Home](https://amanblaze.in/): Full catalog of apps published by Amanblaze, with direct Google Play install links.
+- [About](https://amanblaze.in/about): Who Amanblaze is and how the team operates.
+- [Privacy Policy](https://amanblaze.in/privacy): How user data is collected and used across Amanblaze apps.
+- [Terms & Conditions](https://amanblaze.in/terms): Terms of use for Amanblaze apps and this website.
+- [Refund Policy](https://amanblaze.in/refund): Refund eligibility for paid apps and subscriptions.
+- [Contact](https://amanblaze.in/contact): How to reach Amanblaze for support or partnerships.
+
+## Developer
+Official Google Play developer page: https://play.google.com/store/apps/dev?id=8663227897723109688

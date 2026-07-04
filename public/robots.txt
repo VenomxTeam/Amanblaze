@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://amanblaze.in/sitemap.xml

@@ -1,0 +1,16 @@
+{
+  "developerId": "8663227897723109688",
+  "developerUrl": "https://play.google.com/store/apps/dev?id=8663227897723109688",
+  "lastUpdated": "2026-07-04",
+  "apps": [
+    {
+      "name": "Sample App One",
+      "packageName": "com.amanblaze.sampleone",
+      "category": "Tools",
+      "shortDescription": "Replace this with your real app description.",
+      "icon": "",
+      "installUrl": "https://play.google.com/store/apps/details?id=com.amanblaze.sampleone",
+      "version": "1.0.0"
+    }
+  ]
+}
