@@ -1,4 +1,12 @@
 export default function AppCard({ app }) {
+  // Helper to decode HTML entities like &amp; to &
+  const decodeHtml = (html) => {
+    if (!html) return ''
+    const txt = document.createElement('textarea')
+    txt.innerHTML = html
+    return txt.value
+  }
+
   return (
     <div
       style={{
@@ -24,13 +32,13 @@ export default function AppCard({ app }) {
         />
         <div style={{ minWidth: 0 }}>
           <div style={{ fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: 16, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
-            {app.name}
+            {decodeHtml(app.name)}
           </div>
           <div className="eyebrow" style={{ fontSize: 11 }}>{app.category}</div>
         </div>
       </div>
 
-      <p style={{ fontSize: 14, margin: 0, minHeight: 42 }}>{app.shortDescription}</p>
+      <p style={{ fontSize: 14, margin: 0, minHeight: 42 }}>{decodeHtml(app.shortDescription)}</p>
 
       <div
         style={{
