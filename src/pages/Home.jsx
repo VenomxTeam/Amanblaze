@@ -63,8 +63,8 @@ export default function Home() {
 
       {/* Details / Features Section */}
       <section className="container" style={{ padding: '0 24px 80px' }}>
-        <h2 style={{ fontSize: 22, marginBottom: 4 }}>Why choose our apps?</h2>
-        <p style={{ marginTop: 0, marginBottom: 32, fontSize: 14.5 }}>
+        <h2 style={{ fontSize: 22, marginBottom: 4, textAlign: 'center' }}>Why choose our apps?</h2>
+        <p style={{ marginTop: 0, marginBottom: 32, fontSize: 14.5, textAlign: 'center', maxWidth: 600, margin: '0 auto 32px' }}>
           We focus on what matters most for a seamless experience.
         </p>
 
@@ -112,8 +112,8 @@ export default function Home() {
 
       {/* Testimonials Section */}
       <section className="container" style={{ padding: '0 24px 100px' }}>
-        <h2 style={{ fontSize: 22, marginBottom: 4 }}>What users say</h2>
-        <p style={{ marginTop: 0, marginBottom: 32, fontSize: 14.5 }}>
+        <h2 style={{ fontSize: 22, marginBottom: 4, textAlign: 'center' }}>What users say</h2>
+        <p style={{ marginTop: 0, marginBottom: 32, fontSize: 14.5, textAlign: 'center', maxWidth: 600, margin: '0 auto 32px' }}>
           Reviews from our Google Play community.
         </p>
 
