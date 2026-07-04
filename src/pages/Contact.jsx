@@ -33,8 +33,8 @@ export default function Contact() {
         />
         <ContactCard
           label="Business & Partnerships"
-          value="contact@amanblaze.in"
-          href="mailto:contact@amanblaze.in"
+          value="android@amanblaze.in"
+          href="mailto:android@amanblaze.in"
         />
         <ContactCard
           label="Google Play Store"
