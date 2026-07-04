@@ -86,6 +86,8 @@ export default function Privacy() {
         <p>If you have any questions, concerns, or requests regarding this Privacy Policy or your personal data, please contact us at:</p>
         <p><strong>Email:</strong> <a href="mailto:support@amanblaze.in">support@amanblaze.in</a></p>
       </div>
+    </div>
     </>
   )
 }
+

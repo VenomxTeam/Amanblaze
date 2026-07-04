@@ -46,6 +46,8 @@ export default function About() {
           For support, partnership inquiries, or simply to share feedback on how we can improve an app, reach out to us at <a href="mailto:support@amanblaze.in">support@amanblaze.in</a>.
         </p>
       </div>
+    </div>
     </>
   )
 }
+

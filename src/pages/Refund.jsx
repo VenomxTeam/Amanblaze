@@ -69,6 +69,8 @@ export default function Refund() {
         </ul>
         <p>We aim to process and respond to all refund requests within 3 to 5 business days.</p>
       </div>
+    </div>
     </>
   )
 }
+
