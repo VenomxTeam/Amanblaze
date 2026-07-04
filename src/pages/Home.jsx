@@ -60,6 +60,106 @@ export default function Home() {
           </div>
         )}
       </section>
+
+      {/* Details / Features Section */}
+      <section className="container" style={{ padding: '0 24px 80px' }}>
+        <h2 style={{ fontSize: 22, marginBottom: 4 }}>Why choose our apps?</h2>
+        <p style={{ marginTop: 0, marginBottom: 32, fontSize: 14.5 }}>
+          We focus on what matters most for a seamless experience.
+        </p>
+
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+            gap: 24,
+          }}
+        >
+          {[
+            {
+              title: 'Lightning Fast',
+              desc: 'Optimized for speed and minimal resource usage, ensuring a smooth experience even on older devices.',
+              icon: '⚡'
+            },
+            {
+              title: 'Privacy First',
+              desc: 'We respect your data. Our apps require minimal permissions and do not track your personal information.',
+              icon: '🔒'
+            },
+            {
+              title: 'Regular Updates',
+              desc: 'We constantly improve our apps based on community feedback, adding new features and fixing bugs quickly.',
+              icon: '🔄'
+            }
+          ].map((feature, i) => (
+            <div
+              key={i}
+              style={{
+                background: 'var(--card-bg)',
+                border: '1px solid var(--card-line)',
+                borderRadius: 'var(--radius)',
+                padding: '24px',
+                boxShadow: 'var(--shadow)',
+              }}
+            >
+              <div style={{ fontSize: 32, marginBottom: 16 }}>{feature.icon}</div>
+              <h3 style={{ fontSize: 18, marginBottom: 8 }}>{feature.title}</h3>
+              <p style={{ fontSize: 14.5, margin: 0 }}>{feature.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="container" style={{ padding: '0 24px 100px' }}>
+        <h2 style={{ fontSize: 22, marginBottom: 4 }}>What users say</h2>
+        <p style={{ marginTop: 0, marginBottom: 32, fontSize: 14.5 }}>
+          Reviews from our Google Play community.
+        </p>
+
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+            gap: 24,
+          }}
+        >
+          {[
+            {
+              name: 'Rahul Kumar',
+              review: 'The video downloader is extremely fast and easy to use. Best app in this category without annoying ads everywhere.',
+              app: 'All Video Downloader & Player'
+            },
+            {
+              name: 'Sarah Jenkins',
+              review: 'Finally an app that does exactly what it says. The UI is clean, and downloading files in the background works flawlessly.',
+              app: 'All Video Downloader & Player'
+            }
+          ].map((testimonial, i) => (
+            <div
+              key={i}
+              style={{
+                background: 'var(--bg-raised)',
+                border: '1px solid var(--card-line)',
+                borderRadius: 'var(--radius)',
+                padding: '24px',
+                position: 'relative',
+              }}
+            >
+              <div style={{ color: 'var(--brass)', fontSize: 24, marginBottom: 12 }}>★★★★★</div>
+              <p style={{ fontSize: 15, fontStyle: 'italic', color: 'var(--text)', margin: '0 0 20px 0', lineHeight: 1.6 }}>
+                "{testimonial.review}"
+              </p>
+              <div style={{ display: 'flex', flexDirection: 'column' }}>
+                <span style={{ fontWeight: 600, fontSize: 14.5 }}>{testimonial.name}</span>
+                <span style={{ fontSize: 12.5, color: 'var(--text-muted)', fontFamily: 'var(--font-mono)', marginTop: 4 }}>
+                  User of {testimonial.app}
+                </span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
     </>
   )
 }
