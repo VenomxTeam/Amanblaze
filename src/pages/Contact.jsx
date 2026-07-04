@@ -70,9 +70,59 @@ export default function Contact() {
 
       <div className="prose" style={{ maxWidth: 800, marginTop: 40 }}>
         <h2>Frequently Asked Questions</h2>
-        <p><strong>How fast do you reply?</strong><br />We aim to respond to all support and inquiry emails within 24 to 48 business hours.</p>
-        <p><strong>Where can I request a new feature?</strong><br />We love hearing your ideas! Send an email to our support address with the subject line "Feature Request: [App Name]".</p>
-        <p><strong>Do you do custom app development?</strong><br />Currently, our team is entirely focused on maintaining and expanding our own in-house catalog, so we do not take on external client projects.</p>
+        
+        <details style={{ marginBottom: 16, borderBottom: '1px solid var(--card-line)', paddingBottom: 16 }}>
+          <summary style={{ fontWeight: 600, cursor: 'pointer', outline: 'none', fontSize: 16 }}>How fast do you reply?</summary>
+          <p style={{ marginTop: 12, marginBottom: 0, color: 'var(--text-muted)' }}>We aim to respond to all support and inquiry emails within 24 to 48 business hours.</p>
+        </details>
+
+        <details style={{ marginBottom: 16, borderBottom: '1px solid var(--card-line)', paddingBottom: 16 }}>
+          <summary style={{ fontWeight: 600, cursor: 'pointer', outline: 'none', fontSize: 16 }}>Where can I request a new feature?</summary>
+          <p style={{ marginTop: 12, marginBottom: 0, color: 'var(--text-muted)' }}>We love hearing your ideas! Send an email to our support address with the subject line "Feature Request: [App Name]".</p>
+        </details>
+
+        <details style={{ marginBottom: 16, borderBottom: '1px solid var(--card-line)', paddingBottom: 16 }}>
+          <summary style={{ fontWeight: 600, cursor: 'pointer', outline: 'none', fontSize: 16 }}>Do you do custom app development?</summary>
+          <p style={{ marginTop: 12, marginBottom: 0, color: 'var(--text-muted)' }}>Currently, our team is entirely focused on maintaining and expanding our own in-house catalog, so we do not take on external client projects.</p>
+        </details>
+      </div>
+      
+      {/* FAQ Schema for Google Search */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How fast do you reply?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "We aim to respond to all support and inquiry emails within 24 to 48 business hours."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Where can I request a new feature?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "We love hearing your ideas! Send an email to our support address with the subject line 'Feature Request: [App Name]'."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do you do custom app development?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Currently, our team is entirely focused on maintaining and expanding our own in-house catalog, so we do not take on external client projects."
+                }
+              }
+            ]
+          })
+        }}
+      />
       </div>
     </>
   )
