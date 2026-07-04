@@ -37,6 +37,17 @@ export default function Contact() {
           href="mailto:android@amanblaze.in"
         />
         <ContactCard
+          label="Live Support"
+          value="Raise a Ticket / Chat"
+          href="#"
+          onClick={(e) => {
+            e.preventDefault()
+            if (window.Tawk_API) {
+              window.Tawk_API.maximize()
+            }
+          }}
+        />
+        <ContactCard
           label="Google Play Store"
           value="Our Developer Page"
           href="https://play.google.com/store/apps/dev?id=8663227897723109688"
@@ -128,10 +139,11 @@ export default function Contact() {
   )
 }
 
-function ContactCard({ label, value, href, external }) {
+function ContactCard({ label, value, href, external, onClick }) {
   return (
     <a
       href={href}
+      onClick={onClick}
       target={external ? '_blank' : undefined}
       rel={external ? 'noopener noreferrer' : undefined}
       style={{
