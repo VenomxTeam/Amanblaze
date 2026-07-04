@@ -1,7 +1,14 @@
+import SEO from '../components/SEO.jsx'
+
 export default function Privacy() {
   return (
-    <div className="container" style={{ padding: '64px 24px 80px' }}>
-      <div className="eyebrow">Legal</div>
+    <>
+      <SEO 
+        title="Privacy Policy - Amanblaze" 
+        description="Read the Amanblaze Privacy Policy to understand how we collect, use, and protect your data across our apps." 
+      />
+      <div className="container" style={{ padding: '64px 24px 80px' }}>
+        <div className="eyebrow">Legal</div>
       <h1 style={{ fontSize: 32, marginTop: 10, marginBottom: 24 }}>Privacy Policy</h1>
       <p style={{ marginBottom: 32, fontSize: 14 }}>Last updated: July 4, 2026</p>
 
@@ -79,6 +86,6 @@ export default function Privacy() {
         <p>If you have any questions, concerns, or requests regarding this Privacy Policy or your personal data, please contact us at:</p>
         <p><strong>Email:</strong> <a href="mailto:support@amanblaze.in">support@amanblaze.in</a></p>
       </div>
-    </div>
+    </>
   )
 }

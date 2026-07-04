@@ -1,11 +1,16 @@
 import appsData from '../data/apps.json'
 import AppCard from '../components/AppCard.jsx'
+import SEO from '../components/SEO.jsx'
 
 export default function Home() {
   const { apps, lastUpdated, developerUrl } = appsData
 
   return (
     <>
+      <SEO 
+        title="Amanblaze — Android Apps Built In-House" 
+        description="Amanblaze is a software development community that designs, builds, and publishes its own Android apps on Google Play." 
+      />
       <section className="page-hero">
         <div className="container">
           <div className="eyebrow">Software Development Community</div>

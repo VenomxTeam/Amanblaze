@@ -1,7 +1,14 @@
+import SEO from '../components/SEO.jsx'
+
 export default function About() {
   return (
-    <div className="container" style={{ padding: '64px 24px 80px' }}>
-      <div className="eyebrow">About</div>
+    <>
+      <SEO 
+        title="About Us - Amanblaze" 
+        description="Learn more about Amanblaze, an independent software development studio building high-quality Android applications." 
+      />
+      <div className="container" style={{ padding: '64px 24px 80px' }}>
+        <div className="eyebrow">About</div>
       <h1 style={{ fontSize: 32, marginTop: 10, marginBottom: 24 }}>Who we are</h1>
 
       <div className="prose" style={{ maxWidth: 800 }}>
@@ -39,6 +46,6 @@ export default function About() {
           For support, partnership inquiries, or simply to share feedback on how we can improve an app, reach out to us at <a href="mailto:support@amanblaze.in">support@amanblaze.in</a>.
         </p>
       </div>
-    </div>
+    </>
   )
 }

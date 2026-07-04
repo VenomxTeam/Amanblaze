@@ -1,7 +1,14 @@
+import SEO from '../components/SEO.jsx'
+
 export default function Terms() {
   return (
-    <div className="container" style={{ padding: '64px 24px 80px' }}>
-      <div className="eyebrow">Legal</div>
+    <>
+      <SEO 
+        title="Terms & Conditions - Amanblaze" 
+        description="Terms and conditions for using Amanblaze applications and services." 
+      />
+      <div className="container" style={{ padding: '64px 24px 80px' }}>
+        <div className="eyebrow">Legal</div>
       <h1 style={{ fontSize: 32, marginTop: 10, marginBottom: 24 }}>Terms &amp; Conditions</h1>
       <p style={{ marginBottom: 32, fontSize: 14 }}>Last updated: July 4, 2026</p>
 
@@ -69,6 +76,6 @@ export default function Terms() {
         <p>If you have any questions or concerns regarding these Terms, please contact us at:</p>
         <p><strong>Email:</strong> <a href="mailto:support@amanblaze.in">support@amanblaze.in</a></p>
       </div>
-    </div>
+    </>
   )
 }

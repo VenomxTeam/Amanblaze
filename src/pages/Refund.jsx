@@ -1,7 +1,14 @@
+import SEO from '../components/SEO.jsx'
+
 export default function Refund() {
   return (
-    <div className="container" style={{ padding: '64px 24px 80px' }}>
-      <div className="eyebrow">Legal</div>
+    <>
+      <SEO 
+        title="Refund Policy - Amanblaze" 
+        description="Information regarding refunds for digital purchases made through Google Play on Amanblaze apps." 
+      />
+      <div className="container" style={{ padding: '64px 24px 80px' }}>
+        <div className="eyebrow">Legal</div>
       <h1 style={{ fontSize: 32, marginTop: 10, marginBottom: 24 }}>Refund Policy</h1>
       <p style={{ marginBottom: 32, fontSize: 14 }}>Last updated: July 4, 2026</p>
 
@@ -62,6 +69,6 @@ export default function Refund() {
         </ul>
         <p>We aim to process and respond to all refund requests within 3 to 5 business days.</p>
       </div>
-    </div>
+    </>
   )
 }

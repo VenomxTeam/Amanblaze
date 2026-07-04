@@ -1,7 +1,14 @@
+import SEO from '../components/SEO.jsx'
+
 export default function Contact() {
   return (
-    <div className="container" style={{ padding: '64px 24px 80px' }}>
-      <div className="eyebrow">Get in touch</div>
+    <>
+      <SEO 
+        title="Contact Us - Amanblaze" 
+        description="Get in touch with Amanblaze for support, bug reports, or business partnerships." 
+      />
+      <div className="container" style={{ padding: '64px 24px 80px' }}>
+        <div className="eyebrow">Get in touch</div>
       <h1 style={{ fontSize: 32, marginTop: 10, marginBottom: 24 }}>Contact us</h1>
 
       <div className="prose" style={{ maxWidth: 800 }}>
@@ -67,7 +74,7 @@ export default function Contact() {
         <p><strong>Where can I request a new feature?</strong><br />We love hearing your ideas! Send an email to our support address with the subject line "Feature Request: [App Name]".</p>
         <p><strong>Do you do custom app development?</strong><br />Currently, our team is entirely focused on maintaining and expanding our own in-house catalog, so we do not take on external client projects.</p>
       </div>
-    </div>
+    </>
   )
 }
 
