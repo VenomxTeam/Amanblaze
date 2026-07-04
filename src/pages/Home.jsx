@@ -111,7 +111,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="container" style={{ padding: '0 24px 100px' }}>
+      <section className="container" style={{ padding: '0 24px 60px' }}>
         <h2 style={{ fontSize: 22, marginBottom: 4, textAlign: 'center' }}>What users say</h2>
         <p style={{ marginTop: 0, marginBottom: 32, fontSize: 14.5, textAlign: 'center', maxWidth: 600, margin: '0 auto 32px' }}>
           Reviews from our Google Play community.
@@ -158,6 +158,25 @@ export default function Home() {
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* Final Call to Action */}
+      <section className="container" style={{ padding: '20px 24px 60px', textAlign: 'center' }}>
+        <div style={{ 
+          background: 'linear-gradient(135deg, var(--card-bg) 0%, var(--bg-raised) 100%)',
+          border: '1px solid var(--card-line)',
+          borderRadius: 16,
+          padding: '40px 24px',
+          boxShadow: 'var(--shadow)'
+        }}>
+          <h2 style={{ fontSize: 24, marginTop: 0, marginBottom: 12 }}>Ready to try our apps?</h2>
+          <p style={{ maxWidth: 500, margin: '0 auto 24px', fontSize: 15, color: 'var(--text-muted)' }}>
+            Join millions of users worldwide who trust Amanblaze apps for their daily digital needs. Available now on Google Play.
+          </p>
+          <a href={developerUrl} target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ padding: '12px 24px', fontSize: 16 }}>
+            Explore on Google Play
+          </a>
         </div>
       </section>
     </>
