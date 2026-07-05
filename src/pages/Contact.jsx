@@ -176,8 +176,8 @@ function ContactForm() {
     const form = e.target
     const data = new FormData(form)
     
-    // TODO: Replace with your actual Google Apps Script Web App URL
-    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz_REPLACE_THIS_WITH_YOUR_URL/exec' 
+    // Replace with your actual Google Apps Script Web App URL
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxAOQYV35hAID7toz0EU5ESQrGGR9P0Ubq33JcD6sAvX_T3BuipzRw0tCqeYvwK3gLm_Q/exec' 
     
     setStatus('submitting')
     fetch(SCRIPT_URL, { 
