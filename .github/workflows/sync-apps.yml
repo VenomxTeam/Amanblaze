@@ -46,7 +46,5 @@ jobs:
 
           git commit -m "chore: sync app catalog from Google Play"
 
-          git fetch origin main
-          git rebase origin/main
-
-          git push origin HEAD:main
+          git pull --rebase origin main
+          git push origin main
