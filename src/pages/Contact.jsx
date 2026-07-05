@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import SEO from '../components/SEO.jsx'
 
 export default function Contact() {
@@ -54,6 +55,8 @@ export default function Contact() {
           external
         />
       </div>
+
+      <ContactForm />
 
       <div
         className="prose"
@@ -162,5 +165,76 @@ function ContactCard({ label, value, href, external, onClick }) {
         {value}
       </div>
     </a>
+  )
+}
+
+function ContactForm() {
+  const [status, setStatus] = useState('idle')
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    const form = e.target
+    const data = new FormData(form)
+    
+    // TODO: Replace with your actual Google Apps Script Web App URL
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz_REPLACE_THIS_WITH_YOUR_URL/exec' 
+    
+    setStatus('submitting')
+    fetch(SCRIPT_URL, { 
+      method: 'POST', 
+      body: data,
+      mode: 'no-cors' // Bypasses CORS policy for Google Scripts
+    })
+      .then(() => {
+        setStatus('success')
+        form.reset()
+        setTimeout(() => setStatus('idle'), 5000)
+      })
+      .catch(err => {
+        console.error(err)
+        setStatus('error')
+      })
+  }
+
+  return (
+    <div style={{ marginTop: 40, maxWidth: 800, background: 'var(--card-bg)', border: '1px solid var(--card-line)', padding: '32px', borderRadius: 'var(--radius)', boxShadow: 'var(--shadow)' }}>
+      <h2 style={{ marginTop: 0, marginBottom: 24 }}>Send us a message</h2>
+      <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
+        
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 20 }}>
+          <div>
+            <label style={{ display: 'block', fontSize: 13, marginBottom: 8, color: 'var(--text-muted)' }}>Name *</label>
+            <input name="name" required style={{ width: '100%', padding: '12px 14px', borderRadius: 8, border: '1px solid var(--card-line)', background: 'var(--bg)', color: 'var(--text)' }} />
+          </div>
+          <div>
+            <label style={{ display: 'block', fontSize: 13, marginBottom: 8, color: 'var(--text-muted)' }}>Email *</label>
+            <input type="email" name="email" required style={{ width: '100%', padding: '12px 14px', borderRadius: 8, border: '1px solid var(--card-line)', background: 'var(--bg)', color: 'var(--text)' }} />
+          </div>
+        </div>
+        
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 20 }}>
+          <div>
+            <label style={{ display: 'block', fontSize: 13, marginBottom: 8, color: 'var(--text-muted)' }}>App Name (Optional)</label>
+            <input name="app" placeholder="e.g. All Video Downloader" style={{ width: '100%', padding: '12px 14px', borderRadius: 8, border: '1px solid var(--card-line)', background: 'var(--bg)', color: 'var(--text)' }} />
+          </div>
+          <div>
+            <label style={{ display: 'block', fontSize: 13, marginBottom: 8, color: 'var(--text-muted)' }}>Subject *</label>
+            <input name="subject" required style={{ width: '100%', padding: '12px 14px', borderRadius: 8, border: '1px solid var(--card-line)', background: 'var(--bg)', color: 'var(--text)' }} />
+          </div>
+        </div>
+
+        <div>
+          <label style={{ display: 'block', fontSize: 13, marginBottom: 8, color: 'var(--text-muted)' }}>Message *</label>
+          <textarea name="message" required rows={5} style={{ width: '100%', padding: '12px 14px', borderRadius: 8, border: '1px solid var(--card-line)', background: 'var(--bg)', color: 'var(--text)', resize: 'vertical' }} />
+        </div>
+
+        <button type="submit" disabled={status === 'submitting'} className="btn btn-primary" style={{ padding: '14px 24px', alignSelf: 'flex-start', cursor: status === 'submitting' ? 'wait' : 'pointer' }}>
+          {status === 'submitting' ? 'Sending...' : 'Submit Message'}
+        </button>
+
+        {status === 'success' && <div style={{ color: 'var(--brass)', fontSize: 14.5, marginTop: 4, fontWeight: 500 }}>✓ Your message has been sent successfully!</div>}
+        {status === 'error' && <div style={{ color: '#ef4444', fontSize: 14.5, marginTop: 4, fontWeight: 500 }}>Something went wrong. Please try again or use live chat.</div>}
+      </form>
+    </div>
   )
 }
