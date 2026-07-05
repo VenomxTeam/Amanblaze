@@ -1,15 +1,15 @@
 {
   "developerId": "8663227897723109688",
   "developerUrl": "https://play.google.com/store/apps/dev?id=8663227897723109688",
-  "lastUpdated": "2026-07-04",
+  "lastUpdated": "2026-07-05",
   "apps": [
     {
       "name": "All Video Downloader & Player",
       "packageName": "com.dartdl.app",
-      "category": "Tools",
-      "shortDescription": "The Ultimate Fast Video & MP3 Downloader.",
-      "icon": "",
-      "installUrl": "https://play.google.com/store/apps/details?id=com.dartdl.app",
+      "category": "Video Players & Editors",
+      "shortDescription": "Fast 4K Video &amp; MP3 Downloader. Safe, Private &amp; Unlimited Downloads.",
+      "icon": "https://play-lh.googleusercontent.com/iZqeR9NYKoZeOVIL2U09j06IHhvdAY7YYydGnw2I3Ht8LVuWhf0RyWaxAajyo8iYa0-H2G8eriLRVTwqGTX0vw",
+      "installUrl": "https://play.google.com/store/apps/details?id=com.dartdl.app&hl=en&gl=us",
       "version": "2.0.3"
     }
   ]
