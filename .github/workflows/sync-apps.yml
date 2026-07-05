@@ -2,14 +2,21 @@ name: Sync Play Store apps
 
 on:
   schedule:
-    - cron: '0 3 * * *' # daily at 3am UTC
-  workflow_dispatch: {}
+    - cron: '0 3 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   sync:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
 
       - uses: actions/setup-node@v4
         with:
@@ -25,4 +32,4 @@ jobs:
           git config user.email "bot@amanblaze.com"
           git add src/data/apps.json
           git diff --cached --quiet || git commit -m "chore: sync app catalog from Google Play"
-          git push
+          git push origin HEAD
