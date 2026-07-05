@@ -2,7 +2,7 @@ name: Sync Play Store apps
 
 on:
   schedule:
-    - cron: '0 3 * * *'
+    - cron: "0 3 * * *"
   workflow_dispatch:
 
 permissions:
@@ -13,23 +13,40 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 0
 
-      - uses: actions/setup-node@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      - run: npm install
-      - run: npm install google-play-scraper
-      - run: npm run fetch-apps
+      - name: Install dependencies
+        run: |
+          npm install
+          npm install google-play-scraper
 
-      - name: Commit updated app list
+      - name: Fetch Play Store apps
+        run: npm run fetch-apps
+
+      - name: Commit and push changes
         run: |
           git config user.name "amanblaze-bot"
           git config user.email "bot@amanblaze.com"
+
           git add src/data/apps.json
-          git diff --cached --quiet || git commit -m "chore: sync app catalog from Google Play"
-          git push origin HEAD
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+
+          git commit -m "chore: sync app catalog from Google Play"
+
+          git fetch origin main
+          git rebase origin/main
+
+          git push origin HEAD:main
